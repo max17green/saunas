@@ -1,0 +1,73 @@
+@import smart-grid
+
++reset()
+$col-width-normal: 8
+$col-width-xs: 11
+$col-width-lg: 10
+=myflex()
+  display: flex
+  align-items: center
+body
+  font-family: 'Roboto', sans-serif
+.top
+  .wr-intop
+    +size($col-width-normal)
+    margin: auto
+    justify-content: space-between
+    +myflex()
+    min-height: 100px
+    .right
+      +myflex()
+      .telephones
+        font-weight: 900
+        font-size: 20px
+        margin-right: 15px
+      .wrap-button
+        background-color: #c1c1b8
+        padding: 5px
+        border-radius: 7px
+        button
+          padding: 15px 40px
+          font-size: 20px
+          border-radius: 6px
+          background-color: #e0dd3e
+          border: none
+          border-bottom: 4px solid #bab835
+          transition: 1s background-color
+          &:hover
+            background-color: #bfbc35
+
+header
+  display: flex
+  flex-direction: column
+  background-image: url(../img/korston-zal1_bd6b1.jpg)
+  width: 100%
+  min-height: 600px
+  .wr-nav
+    background-color: rgba(0,0,0, .9)
+    nav
+      +size($col-width-normal)
+      margin: auto
+
+      padding: 5px 0
+      ul
+        +myflex()
+        justify-content: space-around
+        li
+          a
+            color: #fff
+            font-size: 20px
+            text-decoration: none
+
+  h1
+    display: inline-block
+    margin: 40px auto 10px
+    padding: 5px 50px
+    font-size: 35px
+    font-weight: 900
+    background-color: rgba(255,255,255,.7)
+  h2
+    display: inline-block
+    background-color: rgba(255,255,255,.7)
+    margin-top: 10px
+
