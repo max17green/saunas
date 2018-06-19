@@ -620,7 +620,7 @@ header .wr-formfeed .formfeed form .wr-submit input[type=submit]:hover {
   margin: auto;
 }
 
-.wr-reasons .reasons .reasons-title {
+.wr-reasons .reasons-title {
   font-size: 35px;
   font-weight: 900;
   text-align: center;
@@ -714,7 +714,7 @@ header .wr-formfeed .formfeed form .wr-submit input[type=submit]:hover {
   color: #fff;
 }
 
-.wr-wood .wood .wood-title {
+.wr-wood .wood-title {
   margin: 60px auto;
   text-align: center;
   font-size: 24px;
@@ -795,18 +795,22 @@ header .wr-formfeed .formfeed form .wr-submit input[type=submit]:hover {
   margin: auto;
 }
 
-.wr-works .works .works-title {
+.wr-works .works-title {
   margin-top: 70px;
   text-align: center;
   font-weight: 900;
   font-size: 24px;
 }
 
-.wr-works .works .works-title-thin {
+.wr-works .works-title-thin {
   margin-top: 20px;
   margin-bottom: 50px;
   font-size: 20px;
   text-align: center;
+}
+
+.wr-works .works .gallery img {
+  padding: 0 15px;
 }
 
 .wr-works .border-finnish {

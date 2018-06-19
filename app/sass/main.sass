@@ -131,7 +131,7 @@ header
   .reasons
     +size($col-width-normal - 1)
     margin: auto
-    .reasons-title
+    &-title
       font-size: 35px
       font-weight: 900
       text-align: center
@@ -190,7 +190,7 @@ header
     margin: auto
     margin-bottom: 150px
     color: #fff
-    .wood-title
+    &-title
       margin: 60px auto
       text-align: center
       font-size: 24px
@@ -239,16 +239,19 @@ header
   .works
     +size(8)
     margin: auto
-    .works-title
+    &-title
       margin-top: 70px
       text-align: center
       font-weight: 900
       font-size: 24px
-    .works-title-thin
+    &-title-thin
       margin-top: 20px
       margin-bottom: 50px
       font-size: 20px
       text-align: center
+    .gallery
+      img
+        padding: 0 15px
   .border-finnish
     margin-top: 15px
     border: 2px solid #e0dd3e
@@ -258,5 +261,7 @@ header
         font-size: 24px
       &-descript
         font-size: 20px
+      &-gallery
+
           
     
