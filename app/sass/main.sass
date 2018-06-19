@@ -1,4 +1,6 @@
 @import smart-grid
+@import ../libs/slick.css
+@import ../libs/slick-theme.css
 
 +reset()
 $col-width-normal: 8
@@ -179,8 +181,82 @@ header
         .bold-text
           margin-top: 35px
           font-weight: 900
-          text-tra
           text-transform: uppercase
-        .text
+.wr-wood
+  background-color: #000
+  overflow: hidden
+  .wood
+    +size($col-width-normal - 1)
+    margin: auto
+    margin-bottom: 150px
+    color: #fff
+    .wood-title
+      margin: 60px auto
+      text-align: center
+      font-size: 24px
+      font-weight: 900
+    .items
+      display: flex
+      align-items: flex-start
+      justify-content: center
+      flex-wrap: wrap
+      .item
+        +size(4)
+        margin-bottom: 50px
+        .img
+          background-repeat: no-repeat
+          background-position: center center
+          width: 80%
+          min-height: 170px
+          margin: auto
+        &:nth-child(1)
+          .img
+            background-image: url(../img/wood1.png)
+        &:nth-child(2)
+          .img
+            background-image: url(../img/wood2.png)
+        &:nth-child(3)
+          .img
+            background-image: url(../img/wood3.png)
+        &:nth-child(4)
+          .img
+            background-image: url(../img/wood4.png)
+        &:nth-child(5)
+          .img
+            background-image: url(../img/wood5.png)
+        .name
+          margin-top: 20px
+          font-weight: 900
+          font-size: 24px
+          text-align: center
+        ul
+          margin-top: 3px
+          li
+            font-size: 16px
+            text-align: center
+.wr-works
+
+  .works
+    +size(8)
+    margin: auto
+    .works-title
+      margin-top: 70px
+      text-align: center
+      font-weight: 900
+      font-size: 24px
+    .works-title-thin
+      margin-top: 20px
+      margin-bottom: 50px
+      font-size: 20px
+      text-align: center
+  .border-finnish
+    margin-top: 15px
+    border: 2px solid #e0dd3e
+    .finnish
+      padding: 20px
+      &-title
+        font-size: 24px
+      &-descript
+        font-size: 20px
           
     
