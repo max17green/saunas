@@ -251,7 +251,7 @@ header
       text-align: center
     .gallery
       img
-        padding: 0 15px
+        margin: 0 15px
   .border-finnish
     margin-top: 15px
     border: 2px solid #e0dd3e
@@ -262,6 +262,23 @@ header
       &-descript
         font-size: 20px
       &-gallery
-
+        .wr-current-slide
+          margin-top: 20px
+          margin-bottom: 20px
+          display: flex
+          align-items: flex-start
+          justify-content: space-between
+          .current-slide
+            width: 50%
+          .options 
+            width: 47%
+            .line
+              margin-bottom: 25px
+        .finnish-slides
+          +myflex()
+          flex-wrap: wrap
+          img
+            margin: 5px 5px
+            width: calc(100%/4 - 10px)
           
     

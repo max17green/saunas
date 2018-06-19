@@ -810,7 +810,7 @@ header .wr-formfeed .formfeed form .wr-submit input[type=submit]:hover {
 }
 
 .wr-works .works .gallery img {
-  padding: 0 15px;
+  margin: 0 15px;
 }
 
 .wr-works .border-finnish {
@@ -828,6 +828,55 @@ header .wr-formfeed .formfeed form .wr-submit input[type=submit]:hover {
 
 .wr-works .border-finnish .finnish-descript {
   font-size: 20px;
+}
+
+.wr-works .border-finnish .finnish-gallery .wr-current-slide {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.wr-works .border-finnish .finnish-gallery .wr-current-slide .current-slide {
+  width: 50%;
+}
+
+.wr-works .border-finnish .finnish-gallery .wr-current-slide .options {
+  width: 47%;
+}
+
+.wr-works .border-finnish .finnish-gallery .wr-current-slide .options .line {
+  margin-bottom: 25px;
+}
+
+.wr-works .border-finnish .finnish-gallery .finnish-slides {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.wr-works .border-finnish .finnish-gallery .finnish-slides img {
+  margin: 5px 5px;
+  width: -webkit-calc(100%/4 - 10px);
+  width: calc(100%/4 - 10px);
 }
 
 @media screen and (max-width:1280px) {
