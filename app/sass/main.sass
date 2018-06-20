@@ -1,6 +1,7 @@
 @import smart-grid
 @import ../libs/slick.css
 @import ../libs/slick-theme.css
+@import ../css/font-awesome.min.css
 
 +reset()
 $col-width-normal: 8
@@ -235,7 +236,28 @@ header
             font-size: 16px
             text-align: center
 .wr-works
-
+  .firewood
+    position: relative
+    left: 0
+    top: 500px
+    background-image: url( ../img/firewood.png)
+    width: 193px
+    height: 171px
+  .bucket
+    position: relative
+    left: calc(100% - 202px)
+    top: 900px
+    background-image: url(../img/bucket.png)
+    width: 202px
+    height: 347px
+    z-index: 1
+  .bucket2
+    position: relative
+    left: 0
+    top: 1850px
+    background-image: url(../img/bucket2.png)
+    width: 313px
+    height: 431px
   .works
     +size(8)
     margin: auto
@@ -249,7 +271,7 @@ header
       margin-bottom: 50px
       font-size: 20px
       text-align: center
-    .gallery
+    &-top-gallery
       img
         margin: 0 15px
   .border-finnish
@@ -268,7 +290,7 @@ header
           display: flex
           align-items: flex-start
           justify-content: space-between
-          .current-slide
+          .finnish-current-slide
             width: 50%
           .options 
             width: 47%
@@ -280,5 +302,159 @@ header
           img
             margin: 5px 5px
             width: calc(100%/4 - 10px)
+.wr-baths
+  .baths
+    +size($col-width-normal)
+    margin: auto
+    h1
+      margin-top: 200px
+      margin-bottom: 70px
+      text-align: center
+      font-size: 24px
+    &-top-gallery
+      img
+        margin: 0 15px
+    .border-bath
+      margin-top: 15px
+      margin-bottom: 70px
+      border: 2px solid #e0dd3e
+      .bath
+        padding: 20px
+        &-title
+          font-size: 24px
+        &-lower-text
+          font-size: 20px
+        .wr-current-slide
+          margin-top: 20px
+          margin-bottom: 20px
+          display: flex
+          align-items: flex-start
+          justify-content: space-between
+          .bath-current-slide
+            width: 50%
+          .options
+            width: 47%
+            .line
+              margin-bottom: 25px
+        &-slides
+          +myflex()
+          flex-wrap: wrap
+          img
+            margin: 5px 5px
+            width: calc(100%/4 - 10px)
+.dreams
+  background-image: url(../img/bckg1.jpg)
+  background-position: center center
+  min-height: 600px
+  flex-direction: column
+  +myflex()
+  justify-content: center
+  .welcome1, .welcome2
+    font-size: 24px
+    text-align: center
+    display: inline-block
+    color: #fff
+    margin-bottom: 20px
+    font-weight: 900
+  .wr-button
+    text-align: center
+    background-color: #c1c1b8
+    padding: 5px
+    border-radius: 7px
+    button
+      padding: 15px 40px
+      font-size: 20px
+      border-radius: 6px
+      background-color: #e0dd3e
+      border: none
+      border-bottom: 4px solid #bab835
+      transition: 1s background-color
+      &:hover
+        background-color: #bfbc35
+.stages
+  +size($col-width-normal - 2)
+  margin: auto
+  &-title
+    +size(6)
+    margin: 70px auto 0
+    font-size: 24px
+    font-weight: 900
+  &-wrapper
+    margin-top: 30px
+    display: flex
+    align-items: flex-start
+    .left
+      +size(6)
+    .list
+      margin-top: 15px
+      +size(6)
+      +myflex()
+      flex-direction: column
+      ol
+        li
+          font-size: 18px
+          margin-bottom: 35px
+      .wr-button
+        background-color: #c1c1b8
+        padding: 5px
+        border-radius: 7px
+        display: inline-block
+        button
+          padding: 15px 40px
+          font-size: 20px
+          border-radius: 6px
+          background-color: #e0dd3e
+          border: none
+          border-bottom: 4px solid #bab835
+          transition: 1s background-color
+          &:hover
+            background-color: #bfbc35
+.scheme
+  color: #fff
+  overflow: hidden
+  background-image: url(../img/bckg2.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center bottom
+  min-height: 600px
+  width: 100%
+  &-title
+
+    font-weight: 900
+    font-size: 24px
+    margin-top: 70px
+    text-align: center
+  &-items
+    +myflex()
+    +size($col-width-normal - 1)
+    flex-wrap: wrap
+    margin: auto
+    .item
+      &:nth-child(1)
+        .circle
+          i
+            margin-left: 10px
+      margin-top: 30px
+      +size(4)
+
+      .circle
+        width: 100px
+        height: 100px
+        border-radius: 100%
+        border: 2px solid #fff
+        margin: auto
+        +myflex()
+        justify-content: center
+
+        i
+          color: #e0dd3e
+          width: 50px
+          height: 50px
+          font-size: 50px
+
+      .text
+        text-align: center
+        margin-top: 20px
+
           
     
