@@ -10,6 +10,24 @@ $col-width-lg: 10
 =myflex()
   display: flex
   align-items: center
+=button-template()
+  background-color: #c1c1b8
+  padding: 5px
+  border-radius: 7px
+  button
+    padding: 15px 40px
+    font-size: 20px
+    font-weight: 100
+    color: #000
+    border-radius: 6px
+    background-color: #e0dd3e
+    border: none
+    border-bottom: 4px solid #bab835
+    transition: 1s background-color
+    +sm(font-size, 14px)
+    +xs(padding, 10px)
+    &:hover
+      background-color: #bfbc35
 body
   font-family: 'Roboto', sans-serif
 .top
@@ -18,69 +36,90 @@ body
     margin: auto
     justify-content: space-between
     +myflex()
+    flex-wrap: wrap
     min-height: 100px
+    .left
+      +size-md(12)
+      +md(margin-bottom, 20px)
     .right
       +myflex()
+      flex-wrap: wrap
+      +md(margin-bottom, 25px)
       .telephones
         font-weight: 900
         font-size: 20px
         margin-right: 15px
+        +md(margin-bottom, 20px)
       .wrap-button
-        background-color: #c1c1b8
-        padding: 5px
-        border-radius: 7px
-        button
-          padding: 15px 40px
-          font-size: 20px
-          border-radius: 6px
-          background-color: #e0dd3e
-          border: none
-          border-bottom: 4px solid #bab835
-          transition: 1s background-color
-          &:hover
-            background-color: #bfbc35
+        +button-template()
 
 header
-  display: flex
+  display: flex!important
   flex-direction: column
+  align-items: space-between
   background-image: url(../img/korston-zal1_bd6b1.jpg)
   width: 100%
   min-height: 600px
   .wr-nav
     background-color: rgba(0,0,0, .9)
+    +size-md(12)
     nav
       +size($col-width-normal)
       margin: auto
-
       padding: 5px 0
+      .fa-bars
+        color: #fff
+        display: none
+        +md(display, block)
       ul
         +myflex()
+        flex-wrap: wrap
         justify-content: space-around
+        background-color: #000
+        +md(position, absolute)
+        +md(display, none)
         li
+          +md(padding-top, 10px)
+          +md(padding-left, 15px)
+          +md(padding-right, 15px)
           a
             color: #fff
             font-size: 20px
             text-decoration: none
-
+            +sm(font-size, 16px)
+        .slesh
+          +md(display, none)
   h1
     display: inline-block
     margin: 40px auto 10px 
     font-size: 35px
+    +lg(font-size, 27px)
+    +sm(font-size, 23px)
+    +xs(font-size, 18px)
+
     font-weight: 900
     background-color: rgba(255,255,255,.7)
     &:nth-child(2)
-      padding: 5px 70px
+      padding: 5px 5.5%
+      +size-xs(11)
     &:nth-child(3)
-      padding: 5px 40px
+      padding: 5px 2.8%
       margin-top: 0
+      +size-xs(10)
   h2
     display: inline-block
     background-color: rgba(224, 221, 62,.7)
     margin: 10px auto
-    padding: 12px 80px
+    padding: 12px 9.5%
     font-size: 22px
+    +lg(font-size, 18px)
+    +sm(font-size, 15px)
+    +xs(font-size, 13px)
+    +size-xs(8)
   .wr-formfeed
     +size(6)
+    +size-xl(7.4)
+    +size-md(6)
     display: inline-block
     margin: auto
     margin-bottom: 10px
@@ -94,35 +133,35 @@ header
       .leave
         margin: auto
         font-size: 20px
+        +sm(font-size, 14px)
       .individual
         font-weight: 900
         text-align: center
         font-size: 22px
         margin-bottom: 20px
+        +sm(font-size, 12px)
       form
         +myflex()
         flex-wrap: wrap
         justify-content: space-between
-        input
+        +lg(justify-content, center)
+        //align-items: center
+        input[type="text"]
+          margin-right: 10px
           border: none
           padding: 7px
           box-shadow: 0 0 5px #869996
           outline: none
+          +size-md(6)
+          +size-sm(7)
+          +size-xs(11)
+          &:nth-child(1)
+            +md(margin-bottom, 15px)
         .wr-submit
-          background-color: #c1c1b8
-          padding: 5px
-          border-radius: 7px
+          +button-template()
+          +lg(margin, auto)
+          +lg(margin-top, 20px)
           margin-left: 15px
-          input[type="submit"]
-            padding: 15px 40px
-            font-size: 18px
-            border-radius: 6px
-            background-color: #e0dd3e
-            border: none
-            border-bottom: 4px solid #bab835
-            transition: 1s background-color
-            &:hover
-              background-color: #bfbc35
 .wr-reasons
   
   background-image: url(../img/backg1.png)
@@ -134,26 +173,36 @@ header
     margin: auto
     &-title
       font-size: 35px
+      +lg(font-size, 26px)
+      +lg(margin-bottom, 20px)
+      +md(font-size, 22px)
       font-weight: 900
       text-align: center
       margin: 50px auto
     .circles
       display: flex
       flex-wrap: wrap
+      width: 100%
+      justify-content: space-between
       .item
+        text-align: center
         display: flex
-        align-self: center
+        align-items: flex-start
         flex-direction: column
-        +size(3)
-        +size-md(6)
-        +size-xs(12)
+        +size(2.6)
+        +size-lg(6)
+        +lg(margin-bottom, 0)
+        +lg(min-height, 270px)
+        +size-sm(12)
         min-height: 280px
-        margin-bottom: 90px
+        margin-bottom: 65px
         .img
           background-repeat: no-repeat
           background-position: center center
-          max-width: 70%
-          min-height: 130px
+          background-size: cover
+          width: 120px
+          height: 120px
+          margin: 0 auto
         &:nth-child(1)
           .img
             background-image: url(../img/finger.png)
@@ -178,9 +227,8 @@ header
         &:nth-child(8)
           .img
             background-image: url(../img/date.png)
-            
         .bold-text
-          margin-top: 35px
+          margin: 35px auto 10px
           font-weight: 900
           text-transform: uppercase
 .wr-wood
@@ -188,6 +236,7 @@ header
   overflow: hidden
   .wood
     +size($col-width-normal - 1)
+    +size-lg($col-width-lg)
     margin: auto
     margin-bottom: 150px
     color: #fff
@@ -199,10 +248,12 @@ header
     .items
       display: flex
       align-items: flex-start
-      justify-content: center
+      justify-content: space-around
       flex-wrap: wrap
       .item
         +size(4)
+        +size-lg(3.5)
+        +size-md(11)
         margin-bottom: 50px
         .img
           background-repeat: no-repeat
@@ -229,13 +280,22 @@ header
           margin-top: 20px
           font-weight: 900
           font-size: 24px
+          +lg(font-size, 20px)
           text-align: center
         ul
           margin-top: 3px
           li
             font-size: 16px
+            +lg(font-size, 13px)
             text-align: center
 .wr-works
+  background-image: url(../img/backg2.png)
+  background-repeat: no-repeat
+  background-position: center 400px
+  padding-bottom: 350px
+  +lg(padding-bottom, 230px)
+  +sm(padding-bottom, 200px)
+  background-size: contain
   .firewood
     position: relative
     left: 0
@@ -261,6 +321,7 @@ header
   .works
     +size(8)
     margin: auto
+    background-color: #fff
     &-title
       margin-top: 70px
       text-align: center
@@ -296,6 +357,7 @@ header
             width: 47%
             .line
               margin-bottom: 25px
+              float: right
         .finnish-slides
           +myflex()
           flex-wrap: wrap
@@ -303,11 +365,12 @@ header
             margin: 5px 5px
             width: calc(100%/4 - 10px)
 .wr-baths
+  margin-top: -170px
   .baths
     +size($col-width-normal)
     margin: auto
     h1
-      margin-top: 200px
+      margin-top: 20px
       margin-bottom: 70px
       text-align: center
       font-size: 24px
@@ -372,44 +435,44 @@ header
       &:hover
         background-color: #bfbc35
 .stages
-  +size($col-width-normal - 2)
+  +size($col-width-normal + 1)
+  //+sm(text-align, center)
   margin: auto
-  &-title
-    +size(6)
-    margin: 70px auto 0
-    font-size: 24px
-    font-weight: 900
+  
   &-wrapper
     margin-top: 30px
     display: flex
+    justify-content: space-between
     align-items: flex-start
-    .left
-      +size(6)
+    flex-wrap: wrap
+    +md(flex-direction, column-reverse)
+    
+    img
+      margin-top: 120px
+      +md(align-self, center)
+      +md(margin-top, 50px)
     .list
       margin-top: 15px
-      +size(6)
+      +size(8)
+      +size-xl(7)
+      +size-md(11)
+      +size-sm(11)
       +myflex()
       flex-direction: column
+      justify-content: space-between
+      &-title
+        margin-left: 40px
+        margin-bottom: 50px
+        font-size: 24px
+        font-weight: 900
       ol
         li
           font-size: 18px
           margin-bottom: 35px
       .wr-button
-        background-color: #c1c1b8
-        padding: 5px
-        border-radius: 7px
-        display: inline-block
-        button
-          padding: 15px 40px
-          font-size: 20px
-          border-radius: 6px
-          background-color: #e0dd3e
-          border: none
-          border-bottom: 4px solid #bab835
-          transition: 1s background-color
-          &:hover
-            background-color: #bfbc35
+        +button-template()
 .scheme
+  margin-top: 50px
   color: #fff
   overflow: hidden
   background-image: url(../img/bckg2.jpg)
@@ -425,36 +488,166 @@ header
     margin-top: 70px
     text-align: center
   &-items
+
     +myflex()
     +size($col-width-normal - 1)
+    +size-lg($col-width-lg)
     flex-wrap: wrap
+    justify-content: center
     margin: auto
+    margin-left: 17%
+    +lg(margin-left, 5%)
     .item
-      &:nth-child(1)
-        .circle
-          i
-            margin-left: 10px
+      display: flex
+      justify-content: flex-end
+      align-items: flex-start
       margin-top: 30px
       +size(4)
+      
+      min-height: 250px
+      +md(min-height, 270px)
+      +size-sm(6)
+      +size-xs(11)
+      &:nth-child(1)       
+        .circle
+          .column
+            i
+              margin-left: 10px
+      &:nth-child(2n+1)
+        .arrow
+          background-image: url(../img/arrow2.png)
+      &:nth-child(2n)
+        .arrow
+          background-image: url(../img/arrow.png)
 
-      .circle
-        width: 100px
-        height: 100px
-        border-radius: 100%
-        border: 2px solid #fff
-        margin: auto
-        +myflex()
-        justify-content: center
+      div
+        +size(4)
+        +size-xl(5)
+        +size-lg(6)
+        +size-sm(4)
+        +size-xs(3)
+      .arrow
+        margin-top: 15%
+        margin-left: 15%
+        +sm(margin-left, 0)
+        height: 30px
+        background-repeat: no-repeat
+        
+      .column
+        +size(8)
+        +size-xl(7)
+        +size-lg(6)
+        +size-sm(8)
+        +size-xs(9)
+        +xs(margin-left, -50px)
+        .circle
+          width: 100px
+          height: 100px
+          border-radius: 100%
+          border: 2px solid #fff
+          margin: auto
+          +myflex()
+          justify-content: center
 
-        i
-          color: #e0dd3e
-          width: 50px
-          height: 50px
-          font-size: 50px
-
-      .text
-        text-align: center
-        margin-top: 20px
-
-          
-    
+          i
+            color: #e0dd3e
+            width: 50px
+            height: 50px
+            font-size: 50px
+          img
+            width: 45px
+            height: 45px
+        .text
+          text-align: center
+          margin-top: 20px
+          width: 100%
+.reviews
+  overflow: hidden
+  +size($col-width-normal)
+  margin: auto
+  margin-bottom: 90px
+  &-title
+    margin-top: 50px
+    margin-bottom: 50px
+    text-align: center
+    font-size: 24px
+    font-weight: 900
+  &-images
+    +myflex()
+    justify-content: center
+    img
+      &:first-child
+        margin-right: 100px
+      &:last-child
+        margin-left: 100px
+.important
+  text-align: center
+  background-image: url(../img/texture.jpg)
+  overflow: hidden
+  h1
+    margin-top: 70px
+    margin-bottom: 70px
+    font-size: 24px
+    font-weight: 900
+  &-image
+    +size(6)
+    +size-lg(8)
+    background-color: #fff
+    display: inline-block
+    padding: 5px
+    box-shadow: 0 0 3px #000
+    margin-bottom: 70px
+    img
+      width: 100%
+.contacts
+  overflow: hidden
+  &-title
+    margin-top: 30px
+    text-align: center
+    font-size: 30px
+    font-weight: 900
+    margin-bottom: 40px
+  &-map
+    display: block
+    form
+      overflow: hidden
+      position: relative
+      z-index: 55
+      margin-top: -500px
+      margin-left: 50%
+      +sm(margin-left, 35%)
+      +xs(margin-left, 23%)
+      margin-bottom: 100px
+      width: 330px
+      background-color: rgba(0,0,0,.7)
+      color: #fff
+      text-align: center
+      padding: 25px 8px 10px
+      .form-title
+        font-size: 26px
+        margin-bottom: 25px
+      .tel
+        margin-bottom: 15px
+      div
+        font-size: 18px
+        margin-bottom: 7px
+      p
+        input
+          outline: none
+          padding: 10px
+          border-radius: 5px
+          font-size: 18px
+          margin-bottom: 10px
+      .wr-submit
+        +button-template()
+        display: inline-block
+        margin-left: 15px
+footer
+  background-color: #000
+  min-height: 90px
+  +myflex()
+  a
+    color: #fff
+    text-decoration: underline
+    margin-top: 30px
+    margin-left: 20%

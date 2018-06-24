@@ -9,6 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="libs/glyph/css/bootstrap.min.css">
 </head>
 <body>
     <div class="top">
@@ -28,18 +29,19 @@
     <header>
         <div class="wr-nav">
             <nav>
+            <i class="fa fa-bars"></i>
                 <ul>
-                    <li><a href="">Почему мы</a></li>
+                    <li><a href="#wr-reasons">Почему мы</a></li>
                     <li class="slesh">|</li>
-                    <li><a href="">Наши работы</a></li>
+                    <li><a href="#wr-works">Наши работы</a></li>
                     <li class="slesh">|</li>
-                    <li><a href="">Схема работы</a></li>
+                    <li><a href="#scheme">Схема работы</a></li>
                     <li class="slesh">|</li>
-                    <li><a href="">Отзывы</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
                     <li class="slesh">|</li>
                     <li><a href="">FAQ</a></li>
                     <li class="slesh">|</li>
-                    <li><a href="">Контакты</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,7 +57,7 @@
                     <input type="text" placeholder="Ваше имя...">
                     <input type="text" placeholder="Ваш телефон...">
                     <div class="wr-submit">
-                        <input type="submit" value="Получить смету">
+                        <button>Получить смету</button>
                     </div>
                 </form>
                 
@@ -63,7 +65,7 @@
         </div>
     </header>
     <main>
-        <div class="wr-reasons">
+        <div class="wr-reasons" id="wr-reasons">
             <div class="reasons">
                 <div class="reasons-title">8 Причин выбрать нас</div>
                 <div class="circles">
@@ -161,7 +163,7 @@
                 </div>
             </div>
         </div>
-        <div class="wr-works">
+        <div class="wr-works" id="wr-works">
             <!--<div class="firewood"></div>
             <div class="bucket"></div>
             <div class="bucket2"></div>-->
@@ -254,10 +256,11 @@
             </div>
         </div>
         <div class="stages">
-            <div class="stages-title">Этапы внутренней отделки бани: Русская парная размерм 2000 2600 мм, h - 2200 мм</div>
+            
             <div class="stages-wrapper">
                 <img src="img/long-img.jpg" alt="">
                 <div class="list">
+                    <div class="list-title">Этапы внутренней отделки бани: Русская парная размерм 2000 2600 мм, h - 2200 мм</div>
                     <ol>
                         <li>Пароизоляция и изготовление каркаса стен.</li>
                         <li>Монтаж утеплителя. Разводка электричества.</li>
@@ -276,49 +279,105 @@
                 </div>
             </div>
         </div>
-        <div class="scheme">
+        <div class="scheme" id="scheme">
             <div class="scheme-title">Схема работы</div>
             <div class="scheme-items">
                 <div class="item">
-                    <div class="circle">
-                        <i class="fa fa-phone-square"></i>
+                    <div></div>
+                    <div class="column">
+                        <div class="circle">
+                            <i class="fa fa-phone-square"></i>
+                        </div>
+                        <div class="text">Вы <a href="#">Оставляете заявку</a> на сайте или звоните нам по телефону:
+                        +7 (000) 000-00-00
+                        8 (000) 000-00-00</div>
                     </div>
-                    <div class="text">Вы <span>Оставляете заявку</span> на сайте или звоните нам по телефону:
-                    +7 (000) 000-00-00
-                    8 (000) 000-00-00</div>
                 </div>
                 <div class="item">
-                    <div class="circle">
-                        <i class="fa fa-plane"></i>
+                    <div class="arrow"></div>
+                    <div class="column">
+                        <div class="circle">
+                            <i class="fa fa-plane"></i>
+                        </div>
+                        <div class="text">Мы выезжаем к вам делаем замеры и составляем смету</div>
                     </div>
-                    <div class="text">Мы выезжаем к вам делаем замеры и составляем смету</div>
                 </div>
                 <div class="item">
-                    <div class="circle">
-                        <i class="fa fa-handshake-o"></i>
+                    <div class="arrow"></div>
+                    <div class="column">
+                        <div class="circle">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                        </div>
+                        <div class="text">Согласовываем сроки строительства, заключаем договор</div>
                     </div>
-                    <div class="text">Согласовываем сроки строительства, заключаем договор</div>
                 </div>
                 <div class="item">
-                    <div class="circle">
-                        <i class=""></i>
+                    <div class="arrow"></div>
+                    <div class="column">
+                        <div class="circle">
+                            <img src="img/erection.png"></img>
+                        </div>
+                        <div class="text">Производим строительные работы согласно срокам договора</div>
                     </div>
-                    <div class="text">Производим строительные работы согласно срокам договора</div>
                 </div>
                 <div class="item">
-                    <div class="circle">
-                        <i class="fa fa-thumbs-up"></i>
+                    <div class="arrow"></div>
+                    <div class="column">
+                        <div class="circle">
+                            <i class="fa fa-thumbs-up"></i>
+                        </div>
+                        <div class="text">Сдаем вам готовый объект</div>
                     </div>
-                    <div class="text">Сдаем вам готовый объект</div>
                 </div>
                 <div class="item">
-                    <div class="circle">
-                        <i class=""></i>
+                    <div class="arrow"></div>
+                    <div class="column">
+                        <div class="circle">
+                            <img src="img/sauna.png"></img>
+                        </div>
+                        <div class="text">Вы наслаждаетесь собственной баней или сауной</div>
                     </div>
-                    <div class="text">Вы наслаждаетесь собственной баней или сауной</div>
                 </div>
             </div>
         </div>
+        <div class="reviews" id="reviews">
+            <div class="reviews-title">Отзывы о нашей работе</div>
+            <div class="reviews-images">
+                <img src="img/left-bath.png" alt="">
+                <img src="img/right-bath.png" alt="">
+            </div>
+        </div>
+        <div class="important">
+            <h1>Что важно при строительстве сауны?</h1>
+            <div class="important-image">
+                <img src="img/description.jpg" alt="">
+            </div>
+        </div>
+        <div class="contacts" id="contacts">
+            <div class="contacts-title">Контакты</div>
+            <div class="contacts-map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac62c79bf03f037ef1b638b1c09012eda96b2c9f1f07be30be88a4b3fefeb1771&amp;width=100%&amp;height=586&amp;lang=ru_RU&amp;scroll=true"></script>
+                <form action="">
+                    <div class="form-title">Контакты</div>
+                    <div class="name">Название фирмы</div>
+                    <div class="adress">Адрес: город, улица, дом, офис</div>
+                    <div class="email">E-mail info@mail.ru</div>
+                    <div class="tel">Телефон +7(000)000-00-00 <br>
+                    8(000)000-00-00</div>
+                    <p>
+                        <input type="text" name="name" placeholder="Ваше имя...">
+                    </p>
+                    <p>
+                        <input type="text" name="tel" placeholder="Ваш телефон">
+                    </p>
+                    <div class="wr-submit">
+                        <button>Отправить</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <a href="#">Соглашение об обработке персональных данных</a>
+        </footer>
     </main>
 <script src="js/scripts.min.js"></script>
 </body>
