@@ -3553,6 +3553,13 @@ header .wr-nav nav ul li a {
   color: #fff;
   font-size: 20px;
   text-decoration: none;
+  -webkit-transition: 1s color;
+  -o-transition: 1s color;
+  transition: 1s color;
+}
+
+header .wr-nav nav ul li a:hover {
+  color: #e0dd3e;
 }
 
 header h1 {
