@@ -22,7 +22,7 @@ $col-width-lg: 10
     color: #35373a
     border-radius: 6px
     background-color: #e0dd3e
-    font-style: oblique
+    //font-style: oblique
     border: none
     border-bottom: 4px solid #bab835
     transition: 1s background-color
@@ -54,7 +54,6 @@ body
         +md(margin-bottom, 20px)
       .wrap-button
         +button-template()
-
 header
   display: flex!important
   flex-direction: column
@@ -98,7 +97,6 @@ header
     +lg(font-size, 27px)
     +sm(font-size, 23px)
     +xs(font-size, 18px)
-
     font-weight: 900
     background-color: rgba(255,255,255,.7)
     &:nth-child(2)
@@ -147,7 +145,6 @@ header
         flex-wrap: wrap
         justify-content: space-between
         +lg(justify-content, center)
-        //align-items: center
         input[type="text"]
           margin-right: 10px
           border: none
@@ -425,25 +422,10 @@ header
     margin-bottom: 20px
     font-weight: 900
   .wr-button
-    text-align: center
-    background-color: #c1c1b8
-    padding: 5px
-    border-radius: 7px
-    button
-      padding: 15px 40px
-      font-size: 20px
-      border-radius: 6px
-      background-color: #e0dd3e
-      border: none
-      border-bottom: 4px solid #bab835
-      transition: 1s background-color
-      &:hover
-        background-color: #bfbc35
+    +button-template()
 .stages
   +size($col-width-normal + 1)
-  //+sm(text-align, center)
   margin: auto
-  
   &-wrapper
     margin-top: 30px
     display: flex
@@ -451,7 +433,6 @@ header
     align-items: flex-start
     flex-wrap: wrap
     +md(flex-direction, column-reverse)
-    
     img
       margin-top: 120px
       +md(align-self, center)
@@ -487,13 +468,11 @@ header
   min-height: 600px
   width: 100%
   &-title
-
     font-weight: 900
     font-size: 24px
     margin-top: 70px
     text-align: center
   &-items
-
     +myflex()
     +size($col-width-normal - 1)
     +size-lg($col-width-lg)
@@ -508,7 +487,6 @@ header
       align-items: flex-start
       margin-top: 30px
       +size(4)
-      
       min-height: 250px
       +md(min-height, 270px)
       +size-sm(6)
@@ -516,6 +494,10 @@ header
       +xs(min-height, 190px)
       +i5(justify-content, space-between)
       &:nth-child(1)       
+        .column
+          .text
+            a
+              color: #e0dd3e
         .circle
           .column
             i
@@ -526,7 +508,6 @@ header
       &:nth-child(2n)
         .arrow
           background-image: url(../img/arrow.png)
-
       div
         +size(4)
         +size-xl(5)
@@ -540,7 +521,6 @@ header
         +sm(margin-left, 0)
         height: 30px
         background-repeat: no-repeat
-        
       .column
         +size(8)
         +size-xl(7)
@@ -557,7 +537,6 @@ header
           margin: auto
           +myflex()
           justify-content: center
-
           i
             color: #e0dd3e
             width: 50px
@@ -709,7 +688,6 @@ footer
   overflow: hidden
   background-color: #000
   min-height: 90px
-  //+lg(min-height, 300px)
   +myflex()
   div
     margin-top: 25px
