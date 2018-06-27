@@ -12,19 +12,21 @@ $col-width-lg: 10
   align-items: center
 =button-template()
   background-color: #c1c1b8
+  background: radial-gradient(#edf1f7, #c1c1b8)
   padding: 5px
   border-radius: 7px
   button
     padding: 15px 40px
     font-size: 20px
     font-weight: 100
-    color: #000
+    color: #35373a
     border-radius: 6px
     background-color: #e0dd3e
+    font-style: oblique
     border: none
     border-bottom: 4px solid #bab835
     transition: 1s background-color
-    +sm(font-size, 14px)
+    +lg(font-size, 14px)
     +xs(padding, 10px)
     &:hover
       background-color: #bfbc35
@@ -168,6 +170,7 @@ header
   background-repeat: no-repeat
   background-position: 0px 70%
   background-size: contain
+  +md(margin-bottom, 35px)
   .reasons
     +size($col-width-normal - 1)
     margin: auto
@@ -234,11 +237,14 @@ header
 .wr-wood
   background-color: #000
   overflow: hidden
+  background-image: url(../img/text.jpg)
+  background-repeat: no-repeat
+  background-size: cover
   .wood
     +size($col-width-normal - 1)
     +size-lg($col-width-lg)
     margin: auto
-    margin-bottom: 150px
+    margin-bottom: 120px
     color: #fff
     &-title
       margin: 60px auto
@@ -348,17 +354,16 @@ header
         .wr-current-slide
           margin-top: 20px
           margin-bottom: 20px
-          display: flex
-          align-items: flex-start
-          justify-content: space-between
+          display: block
           .finnish-current-slide
+            margin-right: 20px
             width: 50%
-          .options 
-            width: 47%
+            float: left
+          .options
             .line
               margin-bottom: 25px
-              float: right
         .finnish-slides
+          clear: left
           +myflex()
           flex-wrap: wrap
           img
@@ -390,16 +395,16 @@ header
         .wr-current-slide
           margin-top: 20px
           margin-bottom: 20px
-          display: flex
-          align-items: flex-start
-          justify-content: space-between
+          display: block
           .bath-current-slide
             width: 50%
+            float: left
+            margin-right: 20px
           .options
-            width: 47%
             .line
               margin-bottom: 25px
         &-slides
+          clear: left
           +myflex()
           flex-wrap: wrap
           img
@@ -508,6 +513,8 @@ header
       +md(min-height, 270px)
       +size-sm(6)
       +size-xs(11)
+      +xs(min-height, 190px)
+      +i5(justify-content, space-between)
       &:nth-child(1)       
         .circle
           .column
@@ -526,6 +533,7 @@ header
         +size-lg(6)
         +size-sm(4)
         +size-xs(3)
+        +size-i5(4)
       .arrow
         margin-top: 15%
         margin-left: 15%
@@ -540,6 +548,7 @@ header
         +size-sm(8)
         +size-xs(9)
         +xs(margin-left, -50px)
+        +size-i5(8)
         .circle
           width: 100px
           height: 100px
@@ -563,23 +572,68 @@ header
           width: 100%
 .reviews
   overflow: hidden
-  +size($col-width-normal)
+  +size($col-width-normal - 2)
+  +size-xl(8)
+  +size-lg($col-width-lg - 1)
   margin: auto
-  margin-bottom: 90px
   &-title
     margin-top: 50px
     margin-bottom: 50px
+    +sm(margin-bottom, 20px)
     text-align: center
     font-size: 24px
     font-weight: 900
   &-images
     +myflex()
+    justify-content: space-between
+    flex-wrap: wrap
+    +sm(justify-content, center)
+    +sm(text-align, center)
+    .left, .right
+      +size(6)
+      +size-sm(10)
+      +sm(margin-bottom, 45px)
+    .right
+      img
+        margin-left: 50px
+        +sm(margin-left, 0)
+.reviews-comments
+  +size($col-width-normal - 1)
+  +size-xl(9.3)
+  +size-lg($col-width-lg + 0.3)
+  margin: auto
+  margin-bottom: 140px
+  +sm(margin-bottom, 50px)
+  display: flex
+  align-items: flex-start
+  i
+    width: 30px
+    height: 30px
+    font-size: 40px
+    font-weight: 900
+    color: #c4096a
+    border: 4px solid #c4096a
+    border-radius: 100%
+    padding: 20px
+    +myflex()
     justify-content: center
-    img
-      &:first-child
-        margin-right: 100px
-      &:last-child
-        margin-left: 100px
+  .slick-list
+    border: 10px solid #fff
+  .comment
+    &:nth-child(odd)
+      padding-right: 50px
+      padding-left: 10px
+      +sm(padding, 0)
+    &:nth-child(even)
+      padding-left: 50px
+      padding-right: 10px
+      +sm(padding, 0)
+    &-title
+      font-size: 24px
+      font-weight: 800
+    &-name
+      font-size: 20px
+      margin-bottom: 25px
 .important
   text-align: center
   background-image: url(../img/texture.jpg)
@@ -605,6 +659,7 @@ header
     margin-top: 30px
     text-align: center
     font-size: 30px
+
     font-weight: 900
     margin-bottom: 40px
   &-map
@@ -615,21 +670,25 @@ header
       z-index: 55
       margin-top: -500px
       margin-left: 50%
+      +lg(margin-bottom, 97px)
       +sm(margin-left, 35%)
       +xs(margin-left, 23%)
-      margin-bottom: 100px
-      width: 330px
-      background-color: rgba(0,0,0,.7)
+      +xxs(margin-left, 10%)
+      margin-bottom: 50px
+      width: 300px
+      background-color: rgba(0,0,0,.8)
       color: #fff
       text-align: center
-      padding: 25px 8px 10px
+      padding: 25px 10px 10px 10px
       .form-title
         font-size: 26px
+        +lg(font-size, 25px)
         margin-bottom: 25px
       .tel
         margin-bottom: 15px
       div
         font-size: 18px
+        +lg(font-size, 14px)
         margin-bottom: 7px
       p
         input
@@ -637,17 +696,26 @@ header
           padding: 10px
           border-radius: 5px
           font-size: 18px
+          +lg(font-size, 14px)
           margin-bottom: 10px
       .wr-submit
+        margin: 0 20px
         +button-template()
-        display: inline-block
-        margin-left: 15px
+        display: block
+        button
+          width: 100%
+          padding: 15px 10px
 footer
+  overflow: hidden
   background-color: #000
   min-height: 90px
+  //+lg(min-height, 300px)
   +myflex()
-  a
-    color: #fff
-    text-decoration: underline
-    margin-top: 30px
-    margin-left: 20%
+  div
+    margin-top: 25px
+    +xs(margin-left, 5px)
+    a
+      color: #c2c8d1
+      text-decoration: underline
+      margin-left: 20%
+      +xs(margin-left, 0)
